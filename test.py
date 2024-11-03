@@ -1,11 +1,11 @@
-import flask
+from flask import Flask
 import cv2
 import mediapipe as mp
 import numpy as np
 # from playsound import playsound
 import threading
 
-app = flask(__name__)
+app = Flask(__name__)
 
 # Initialize MediaPipe Pose
 mp_pose = mp.solutions.pose
