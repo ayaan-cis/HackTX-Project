@@ -2,7 +2,7 @@ from flask import Flask
 import cv2
 import mediapipe as mp
 import numpy as np
-# from playsound import playsound
+from playsound import playsound
 import threading
 
 app = Flask(__name__)
