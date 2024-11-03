@@ -1,11 +1,11 @@
-import Flask
+import flask
 import cv2
 import mediapipe as mp
 import numpy as np
-from playsound import playsound
+# from playsound import playsound
 import threading
 
-app = Flask(__name__)
+app = flask(__name__)
 
 # Initialize MediaPipe Pose
 mp_pose = mp.solutions.pose
@@ -33,10 +33,10 @@ def calculate_angle(point1, point2, point3):
 
     return angle_deg if not np.isnan(angle_deg) else 0.0
 
-
-# Function to play sound in a separate thread
-def play_sound_async(sound_path):
-    threading.Thread(target=playsound, args=(sound_path,), daemon=True).start()
+#
+# # Function to play sound in a separate thread
+# def play_sound_async(sound_path):
+#     threading.Thread(target=playsound, args=(sound_path,), daemon=True).start()
 
 
 # Function to generate video frames
